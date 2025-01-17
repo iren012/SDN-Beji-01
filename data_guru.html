@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visi dan Misi - SDN Beji 01</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="logo.png" alt="Logo SDN Beji 01" class="logo">
+    </header>
+
+    <!-- Navigasi Menu -->
+    <nav>
+        <section id="selamat-datang">
+            <h1>Selamat Datang di </h1>
+            <p>SEKOLAH DASAR BEJI 01</p>
+        </section>
+        <ul>
+            <li><a href="beranda.html">Beranda</a></li>
+            <li><a href="profil.html">Profil Sekolah</a></li>
+            <li><a href="pengumuman.html">pengumuman Sekolah</a></li>
+            <li><a href="data_guru.html">Data Guru</a></li>
+            <li><a href="kegiatan.html">Kegiatan</a></li> 
+            <li><a href="peta_lokasi.html">peta lokasi</a></li> 
+        </ul>
+    </nav>
+
+    <main>
+        <section id="data-guru">
+            <h2>Data Guru</h2>
+            
+            <div class="kepala-sekolah">
+                <h3>Kepala Sekolah</h3>
+                <p><strong>Nama:</strong> Ibu Retno Ristiani, S.PD. SD</p>
+                <p><strong>Jabatan:</strong> Kepala Sekolah SDN Beji 01</p>
+            </div>
+
+            <h3>Daftar Guru</h3>
+            <div id="guru-list"></div>
+            <button onclick="tambahGuru()">Tambah Guru</button>
+
+            <!-- Form untuk memasukkan nama guru -->
+            <div id="form-guru" style="display: none;">
+                <input type="text" id="nama-guru" placeholder="Masukkan nama guru">
+                <button onclick="simpanGuru()">Simpan</button>
+                <button onclick="batalTambah()">Batal</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+      
+        <div class="kontak">
+            <p><strong>Email:</strong> <a href="sdnnegeribeji1@gmail.com">info@sdnegeribeji1@gmail.com</a></p>
+            <p><strong>Alamat:</strong> Jl. Merdeka No.11, Kelurahan Beji, Ungaran Timur, Kabupaten Semarang, Jawa Tengah</p>
+            <p><strong>Nomor Telepon:</strong> (024) 76913213</p>
+        </div>
+    </footer>
+        
+        
+        </footer> 
+
+   
+    <script src="script.js"></script>
+</body>
+</html>

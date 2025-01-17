@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SDN Beji 01</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Kontainer untuk Login -->
+    <div class="login-wrapper">
+        <div class="login-container">
+            <!-- Logo -->
+            <img src="logo.png" alt="Logo SDN Beji 01" class="logo">
+            <h2>Login</h2>
+            <!-- Form Login -->
+            <form id="loginForm" onsubmit="return login()">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <p id="error-message" class="error-message"></p>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Login sederhana (validasi statis)
+            if (username === "admin" && password === "12345") {
+                // Jika login berhasil, redirect ke halaman beranda
+                window.location.href = "beranda.html";
+            } else {
+                // Jika login gagal, tampilkan pesan error
+                document.getElementById("error-message").textContent = "Username atau password salah!";
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>

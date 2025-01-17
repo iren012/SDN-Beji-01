@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Pengumuman - SDN Beji 01</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="logo.png" alt="Logo SDN Beji 01" class="logo">
+        <h1>Pengumuman Sekolah</h1>
+    </header>
+
+    <!-- Navigasi Menu -->
+    <nav>
+        <ul>
+            <li><a href="beranda.html">Beranda</a></li>
+            <li><a href="profil.html">Profil Sekolah</a></li>
+            <li><a href="berita.html">Berita Sekolah</a></li>
+            <li><a href="data_guru.html">Data Guru</a></li>
+            <li><a href="kegiatan.html">Kegiatan</a></li> 
+            <li><a href="peta_lokasi.html">Peta Lokasi</a></li>
+            <li><a href="pengumuman.html" class="active">Pengumuman</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Form untuk Menambah Pengumuman -->
+        <section class="form-tambah">
+            <h2>Tambah Pengumuman</h2>
+            <form id="form-tambah" onsubmit="return tambahPengumuman(event)">
+                <label for="judul">Judul Pengumuman:</label>
+                <input type="text" id="judul" required>
+
+                <label for="isi">Isi Pengumuman:</label>
+                <textarea id="isi" required></textarea>
+
+                <button type="submit">Tambah Pengumuman</button>
+            </form>
+        </section>
+
+        <!-- Daftar Pengumuman -->
+        <section class="pengumuman-list">
+            <h2>Daftar Pengumuman</h2>
+            <ul id="pengumuman-list">
+                <!-- Pengumuman akan ditampilkan di sini -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+       
+        <div class="kontak">
+            <p><strong>Email:</strong> <a href="sdnnegeribeji1@gmail.com">info@sdnegeribeji1@gmail.com</a></p>
+            <p><strong>Alamat:</strong> Jl. Merdeka No.11, Kelurahan Beji, Ungaran Timur, Kabupaten Semarang, Jawa Tengah</p>
+            <p><strong>Nomor Telepon:</strong> (024) 76913213</p>
+        </div>
+    </footer>
+        
+    <script src="script.js"></script>
+</body>
+</html>

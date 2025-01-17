@@ -1,0 +1,270 @@
+/* Body styling */
+body {
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Styling header */
+header {
+    color: rgb(18, 131, 52);
+    padding: 20px 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+    display: flex;
+    flex-direction: column; /* Mengatur elemen header agar tampil vertikal */
+    justify-content: flex-start; /* Menempatkan logo di bagian kanan atas */
+    align-items: center;
+    background-color: rgba(87, 167, 40, 1); /* Menambahkan warna latar belakang header */
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+header:hover {
+    background-color: rgba(87, 167, 40, 1);
+}
+
+/* Logo styling */
+header .logo {
+    width: 120px; /* Menyesuaikan lebar logo */
+    height: auto;
+    margin-bottom: 20px; /* Memberikan jarak antara logo dan bagian bawah */
+    transition: transform 0.3s ease;
+}
+
+header .logo:hover {
+    transform: rotate(10deg); /* Efek rotasi pada logo saat dihover */
+}
+
+/* Navigasi menu */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    background-color: #333; /* Menambahkan warna latar belakang navigasi */
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(40, 167, 69, 0.7); 
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Main content styling */
+main {
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+main:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+section {
+    margin: 20px 0;
+    padding: 20px;
+}
+
+/* Styling Welcome Message */
+.welcome-message {
+    font-size: 40px;
+    color: #4CAF50;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInUp 2s ease-in-out;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.welcome-message:hover {
+    color: #71a045;
+    cursor: pointer;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Animasi untuk pesan Selamat Datang */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling untuk kalimat Selamat Datang */
+#selamat-datang {
+    color: #4CAF50; /* Menggunakan warna hijau yang serasi dengan tema */
+    text-align: center;
+    padding: 50px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #0000001a;
+    animation: fadeIn 2s forwards;
+    
+}
+
+/* Animasi fade-in untuk selamat datang */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#selamat-datang h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#selamat-datang p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Efek transisi untuk elemen pada halaman */
+#selamat-datang p {
+    transition: color 0.3s ease;
+}
+
+#selamat-datang:hover p {
+    color: #4CAF50;
+}
+
+/* Styling tombol interaktif */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #218838;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* Responsif Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 15px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 15px;
+        margin: 20px auto;
+    }
+}
+
+/* Mengatur foto dan gambar agar responsif */
+img, .foto, .foto-profil {
+    width: 100%;  /* Menyesuaikan lebar gambar dengan lebar kontainer */
+    max-width: 400px;  /* Menentukan lebar maksimum gambar, sesuaikan jika perlu */
+    height: auto;  /* Memastikan aspek rasio gambar tetap terjaga */
+    display: block;  /* Menghilangkan spasi di bawah gambar */
+    margin: 0 auto;  /* Menambahkan margin otomatis agar gambar terpusat */
+    border-radius: 8px;  /* Menambahkan sudut melengkung pada gambar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Menambahkan bayangan lembut pada gambar */
+    transition: transform 0.3s ease;  /* Efek transisi untuk gambar */
+}
+
+/* Efek hover pada gambar */
+.foto:hover, .foto-profil:hover {
+    transform: scale(1.05);  /* Efek zoom saat gambar dihover */
+}
+
+/* Menyesuaikan foto galeri dengan jarak antar gambar */
+.foto-galeri {
+    display: flex;
+    flex-wrap: wrap;  /* Membuat gambar-gambar menyesuaikan ukuran */
+    gap: 15px;  /* Menambahkan jarak antar gambar */
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Responsif untuk gambar di layar kecil */
+@media (max-width: 768px) {
+    .foto, .foto-profil {
+        max-width: 100%;  /* Gambar mengisi lebar kontainer pada layar kecil */
+        margin-bottom: 20px;  /* Memberikan jarak antara gambar */
+    }
+
+    .foto-galeri {
+        flex-direction: column;  /* Gambar ditampilkan secara vertikal pada layar kecil */
+        align-items: center;  /* Menyelaraskan gambar di tengah */
+    }
+}
+
+/* Styling untuk kontainer gambar peta */
+#map-container {
+    width: 100%;
+    height: 400px;  /* Menyesuaikan ukuran iframe peta */
+    margin: 20px 0;
+}
+
+#map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Responsif untuk gambar pada kontainer peta pada layar lebih kecil */
+@media (max-width: 600px) {
+    #map-container {
+        height: 300px;  /* Menyesuaikan tinggi peta pada layar kecil */
+    }
+}
+
