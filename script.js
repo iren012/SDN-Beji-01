@@ -139,3 +139,5 @@ function hapusGuru(index) {
 // Panggil loadGuru() ketika halaman dimuat
 window.onload = loadGuru;
 
+
+
